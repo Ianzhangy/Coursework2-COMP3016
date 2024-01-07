@@ -29,3 +29,10 @@ Users can control actions using the following keys:
 
 - The 3D room project involves downloading and loading existing OBJ models (tables and chairs) from the network and applying existing textures to objects. Its inspiration comes from a 3D room displayed by a teacher in class. The most distinctive feature of Snail Dwelling is to have the TV display the author's signature rendering to prove the uniqueness of the work, followed by the function of opening and closing the room door, making the entire room more realistic. Of course, there is still room for improvement in aesthetics compared to other 3D rooms, and there is room for further improvement. The project started with downloading VS2022, followed by building and configuring the OpenGL environment (GLFW, GLAD, glm library) according to the video tutorial, as well as downloading 3D models and beautiful textures. Afterward, we started creating windows, building rooms, loading models, rendering rooms and models, and finally adding case interaction functionality.
 
+## Video Link
+
+https://www.youtube.com/watch?v=aHuFO0mz7os
+
+## Project Git Repository
+
+https://github.com/Ianzhangy/Coursework1
