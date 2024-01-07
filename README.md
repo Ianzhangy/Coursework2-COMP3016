@@ -1,7 +1,7 @@
 # Coursework2-COMP3016
 
 
-## 3DRoom
+## 3D-Room
 
 ## 1. How to Control
 
