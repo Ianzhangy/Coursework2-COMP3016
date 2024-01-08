@@ -42,7 +42,7 @@ Users can control actions using the following keys:
 
 ## Video Link
 
-https://www.youtube.com/watch?v=aHuFO0mz7os
+https://youtu.be/fv6CHOnVhes
 
 ## Project Git Repository
 
