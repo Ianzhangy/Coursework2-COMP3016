@@ -41,7 +41,7 @@ float tf;
 glm::mat4 pMat, vMat, tMat, rMat, sMat,mMat, mvMat; // mat to shader
 
 // Textures
-GLuint brickTexture, floor_color_Texture, floor_stone_Texture,wood_Texture, door_Texture, light_Wood_Texture,earthTexture, pictureTexture;
+GLuint brickTexture, floor_color_Texture, floor_stone_Texture,wood_Texture, door_Texture, light_Wood_Texture;
 GLuint nameTexture, blackTexture, tvTexture;
 
 
@@ -185,9 +185,7 @@ void init(GLFWwindow* window) {
 
 	light_Wood_Texture= Utils::loadTexture("img/light_Wood.jpg");
 	floor_stone_Texture = Utils::loadTexture("img/3Dxy_Img_2.jpg");
-	pictureTexture = Utils::loadTexture("img/picture.jpg");
 	nameTexture = Utils::loadTexture("img/name.jpg");
-	earthTexture = Utils::loadTexture("img/earth.jpg");
 	blackTexture = Utils::loadTexture("img/black.jpg");
 	tvTexture = Utils::loadTexture("img/tv.jpg");  
 
@@ -551,8 +549,7 @@ int main()
 
 void processInput(GLFWwindow *window)
 {
-	//do delay 100ms
-	Sleep(100);
+
 	int step = 1;
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
