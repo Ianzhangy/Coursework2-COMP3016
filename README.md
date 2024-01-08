@@ -9,12 +9,12 @@ To run the program, double-click on the executable file (exe). Ensure that compl
 
 Users can control actions using the following keys:
 
-- **A, D, S, W**: Move the viewer left, right, forward, and backward, respectively.
+- **A, D, S, W**: Move the viewer left, right, backward, and forward, respectively.
 - **Z**: Move the viewer down.
 - **X**: Move the viewer up.
 - **Q**: Reset the viewer's position and orientation.
-- **C**: Close the door.
 - **V**: Open the door.
+- **C**: Close the door.
 - **1**: TV displays the developer's signature.
 - **2**: TV displays the TV interface.
 
