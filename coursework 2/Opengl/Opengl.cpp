@@ -29,7 +29,7 @@ float objLocX, objLocY, objLocZ;
 GLuint renderingProgram;  // shader program
 
 GLuint vao[numVAOs];
-GLuint vbo_obj_sofa[1]; // vbo of obj
+GLuint vbo_obj_chair[1]; // vbo of obj
 
 
 
@@ -46,7 +46,7 @@ GLuint nameTexture, blackTexture, tvTexture;
 
 
 // load obj model
-ImportedModel myModel_sofa("obj/1/Tables_Chairs.obj");
+ImportedModel myModel_chair("obj/1/Tables_Chairs.obj");
 
 bool changeTvTexutre = false; // flag of change tv texture
 
@@ -56,13 +56,13 @@ float toRadians(float degrees) { return (degrees * 2.0f * 3.14159f) / 360.0f; }
 
 // init obj vao vbo 
 void setupVertices_obj(ImportedModel &myModel, GLuint *vbo_obj,int nSize) {
-std::vector<glm::vec3> vert = myModel.getVertices();
-std::vector<glm::vec2> tex = myModel.getTextureCoords();
-std::vector<glm::vec3> norm = myModel.getNormals();
+	vector<glm::vec3> vert = myModel.getVertices();
+	vector<glm::vec2> tex = myModel.getTextureCoords();
+	vector<glm::vec3> norm = myModel.getNormals();
 
-std::vector<float> pvalues;
-std::vector<float> tvalues;
-std::vector<float> nvalues;
+	vector<float> pvalues;
+	vector<float> tvalues;
+	vector<float> nvalues;
 
 for (int i = 0; i < myModel.getNumVertices(); i++) {
 	if (nSize >= 1) {
@@ -283,8 +283,8 @@ void setupVertice_Cube() {
 void setupVertices(void) {
 	glGenVertexArrays(numVAOs, vao);
 	glBindVertexArray(vao[0]);
-	glGenBuffers(1, vbo_obj_sofa);
-	setupVertices_obj(myModel_sofa, vbo_obj_sofa, 3);
+	glGenBuffers(1, vbo_obj_chair);
+	setupVertices_obj(myModel_chair, vbo_obj_chair, 3);
 }
 
 
@@ -603,7 +603,7 @@ void display(GLFWwindow* window, double currentTime) {
 	sMat = glm::scale(glm::mat4(1.0f), glm::vec3(2, 2, 2));
 	glm::mat4 mT =glm::translate(mvMat, glm::vec3(0,-13,0));//mvMat drop to floor
 	mvMat = mT * sMat;
-	display_obj(mvMat, &myModel_sofa, vbo_obj_sofa, 3, light_Wood_Texture);
+	display_obj(mvMat, &myModel_chair, vbo_obj_chair, 3, light_Wood_Texture);
 }
 
 
