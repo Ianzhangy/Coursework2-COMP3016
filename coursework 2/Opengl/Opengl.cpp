@@ -103,30 +103,153 @@ unsigned int cubeVAO;
 unsigned int VBO[3];
 void setupVertice_Cube() {
 	float  vertexPositions[] = {
-		-0.5f, -0.5f, -0.5f, 0.5f, -0.5f, -0.5f, 0.5f,  0.5f, -0.5f, 0.5f,  0.5f, -0.5f, -0.5f,  0.5f, -0.5f, -0.5f, -0.5f, -0.5f,
-		-0.5f, -0.5f,  0.5f, 0.5f, -0.5f,  0.5f, 0.5f,  0.5f,  0.5f, 0.5f,  0.5f,  0.5f, -0.5f,  0.5f,  0.5f, -0.5f, -0.5f,  0.5f,
-		-0.5f,  0.5f,  0.5f, -0.5f,  0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f, -0.5f,  0.5f, -0.5f,  0.5f,  0.5f,
-		0.5f,  0.5f,  0.5f, 0.5f,  0.5f, -0.5f, 0.5f, -0.5f, -0.5f, 0.5f, -0.5f, -0.5f, 0.5f, -0.5f,  0.5f, 0.5f,  0.5f,  0.5f,
-		-0.5f, -0.5f, -0.5f, 0.5f, -0.5f, -0.5f, 0.5f, -0.5f,  0.5f, 0.5f, -0.5f,  0.5f, -0.5f, -0.5f,  0.5f, -0.5f, -0.5f, -0.5f,
-		-0.5f,  0.5f, -0.5f, 0.5f,  0.5f, -0.5f, 0.5f,  0.5f,  0.5f, 0.5f,  0.5f,  0.5f, -0.5f,  0.5f,  0.5f, -0.5f,  0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f, 
+		0.5f, -0.5f, -0.5f, 
+		0.5f,  0.5f, -0.5f, 
+
+		0.5f,  0.5f, -0.5f,
+		-0.5f,  0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f,
+
+		-0.5f, -0.5f,  0.5f, 
+		0.5f, -0.5f,  0.5f, 
+		0.5f,  0.5f,  0.5f,
+
+		0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f,  0.5f, 
+		-0.5f, -0.5f,  0.5f,
+
+		-0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f,
+
+		-0.5f, -0.5f, -0.5f, 
+		-0.5f, -0.5f,  0.5f, 
+		-0.5f,  0.5f,  0.5f,
+
+		0.5f,  0.5f,  0.5f, 
+		0.5f,  0.5f, -0.5f, 
+		0.5f, -0.5f, -0.5f,
+
+		0.5f, -0.5f, -0.5f, 
+		0.5f, -0.5f,  0.5f, 
+		0.5f,  0.5f,  0.5f,
+
+		-0.5f, -0.5f, -0.5f, 
+		0.5f, -0.5f, -0.5f, 
+		0.5f, -0.5f,  0.5f, 
+
+		0.5f, -0.5f,  0.5f, 
+		-0.5f, -0.5f,  0.5f,
+		-0.5f, -0.5f, -0.5f,
+
+		-0.5f,  0.5f, -0.5f, 
+		0.5f,  0.5f, -0.5f,
+		0.5f,  0.5f,  0.5f,
+
+		0.5f,  0.5f,  0.5f, 
+		-0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f, -0.5f,
 	};
 
 	float textureCoordinates[] = {
-			0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-			0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-			0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-			0.0f, 0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f,
-			0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f,
-			0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f
+			0.0f, 0.0f, 
+			1.0f, 0.0f, 
+			1.0f, 1.0f, 
+
+			1.0f, 1.0f, 
+			0.0f, 1.0f, 
+			0.0f, 0.0f,
+
+			0.0f, 0.0f, 
+			1.0f, 0.0f, 
+			1.0f, 1.0f, 
+
+			1.0f, 1.0f, 
+			0.0f, 1.0f, 
+			0.0f, 0.0f,
+
+			0.0f, 0.0f, 
+			1.0f, 0.0f, 
+			1.0f, 1.0f, 
+
+			1.0f, 1.0f, 
+			0.0f, 1.0f, 
+			0.0f, 0.0f,
+
+			0.0f, 0.0f, 
+			1.0f, 0.0f, 
+			1.0f, 1.0f, 
+
+			1.0f, 1.0f, 
+			0.0f, 1.0f,
+			0.0f, 0.0f,
+
+			0.0f, 1.0f, 
+			1.0f, 1.0f, 
+			1.0f, 0.0f, 
+
+			1.0f, 0.0f, 
+			0.0f, 0.0f, 
+			0.0f, 1.0f,
+
+			0.0f, 1.0f, 
+			1.0f, 1.0f, 
+			1.0f, 0.0f,
+
+			1.0f, 0.0f, 
+			0.0f, 0.0f, 
+			0.0f, 1.0f
 	};
 
 	float textureCoordinates1[] = {
-		0.0f, 0.0f, 4.0f, 0.0f, 4.0f, 4.0f, 4.0f, 4.0f, 0.0f, 4.0f, 0.0f, 0.0f,
-		0.0f, 0.0f, 4.0f, 0.0f, 4.0f, 4.0f, 4.0f, 4.0f, 0.0f, 4.0f, 0.0f, 0.0f,
-		0.0f, 0.0f, 4.0f, 0.0f, 4.0f, 4.0f, 4.0f, 4.0f, 0.0f, 4.0f, 0.0f, 0.0f,
-		0.0f, 0.0f, 4.0f, 0.0f, 4.0f, 4.0f, 4.0f, 4.0f, 0.0f, 4.0f, 0.0f, 0.0f,
-		0.0f, 4.0f, 4.0f, 4.0f, 4.0f, 0.0f, 4.0f, 0.0f, 0.0f, 0.0f, 0.0f, 4.0f,
-		0.0f, 4.0f, 4.0f, 4.0f, 4.0f, 0.0f, 4.0f, 0.0f, 0.0f, 0.0f, 0.0f, 4.0f
+		0.0f, 0.0f, 
+		4.0f, 0.0f, 
+		4.0f, 4.0f, 
+
+		4.0f, 4.0f,
+		0.0f, 4.0f, 
+		0.0f, 0.0f,
+
+		0.0f, 0.0f,
+		4.0f, 0.0f, 
+		4.0f, 4.0f, 
+
+		4.0f, 4.0f,
+		0.0f, 4.0f, 
+		0.0f, 0.0f,
+
+		0.0f, 0.0f,
+		4.0f, 0.0f, 
+		4.0f, 4.0f, 
+
+		4.0f, 4.0f, 
+		0.0f, 4.0f, 
+		0.0f, 0.0f,
+
+		0.0f, 0.0f, 
+		4.0f, 0.0f, 
+		4.0f, 4.0f,
+
+		4.0f, 4.0f,
+		0.0f, 4.0f, 
+		0.0f, 0.0f,
+
+		0.0f, 4.0f, 
+		4.0f, 4.0f, 
+		4.0f, 0.0f, 
+
+		4.0f, 0.0f, 
+		0.0f, 0.0f, 
+		0.0f, 4.0f,
+
+		0.0f, 4.0f, 
+		4.0f, 4.0f, 
+		4.0f, 0.0f, 
+
+		4.0f, 0.0f, 
+		0.0f, 0.0f, 
+		0.0f, 4.0f
 	};
 
 	glGenBuffers(3, VBO);
@@ -254,7 +377,7 @@ void display(GLFWwindow* window, double currentTime) {
 	glClearColor(0.0, 0.0, 0.0, 1.0); // background color
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	glUseProgram(renderingProgram);
+	glUseProgram(renderingProgram);//Using shader programs for rendering
 
 	mvLoc = glGetUniformLocation(renderingProgram, "mv_matrix");  // view * model matrix
 	projLoc = glGetUniformLocation(renderingProgram, "proj_matrix"); // projection matrix
@@ -480,7 +603,7 @@ void display(GLFWwindow* window, double currentTime) {
 	sMat = glm::scale(glm::mat4(1.0f), glm::vec3(2, 2, 2));
 	glm::mat4 mT =glm::translate(mvMat, glm::vec3(0,-13,0));//mvMat drop to floor
 	mvMat = mT * sMat;
-	display_obj(mvMat, &myModel_sofa,vbo_obj_sofa,3, light_Wood_Texture);
+	display_obj(mvMat, &myModel_sofa, vbo_obj_sofa, 3, light_Wood_Texture);
 }
 
 
@@ -496,8 +619,8 @@ void window_size_callback(GLFWwindow* win, int newWidth, int newHeight) {
 
 
 
-const unsigned int SCR_WIDTH = 800;
-const unsigned int SCR_HEIGHT = 600;
+const unsigned int SCR_WIDTH = 800;//window width
+const unsigned int SCR_HEIGHT = 600; //window height
 
 int main()
 {
@@ -512,7 +635,7 @@ int main()
 	GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "MyOpenGL", NULL, NULL);
 	if (window == NULL)
 	{
-		cout << "Failed to create GLFW window" << std::endl;
+		cout << "Failed to create GLFW window" << endl;
 		glfwTerminate();
 		return -1;
 	}
@@ -520,10 +643,10 @@ int main()
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	glfwSetWindowSizeCallback(window, window_size_callback);
 
-	// glad: load all OpenGL function pointers
+	// glad: load all OpenGL function pointers - initialize
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
-		cout << "Failed to initialize GLAD" << std::endl;
+		cout << "Failed to initialize GLAD" << endl;
 		return -1;
 	}
 
@@ -612,3 +735,4 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	// height will be significantly larger than specified on retina displays.
 	glViewport(0, 0, width, height);
 }
+
