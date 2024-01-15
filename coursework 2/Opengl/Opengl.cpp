@@ -5,8 +5,6 @@
 #include <windows.h>
 using namespace std;
 
-
-#include "Sphere.h"
 #include "Utils.h"
 #include "ImportedModel.h"	
 
